@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Макеты / Формы / SimpleAdminPanel</title>
+
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../vendor/fortawesome/font-awesome/css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../src/css/styles.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <a href="../index.html">SimpleAdminPanel</a>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-user">
+                <img src="../../images/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Иванов Иван">
+                <div class="fw-bold">Иванов Иван</div>
+                <small>IvanovIvan</small>
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="../index.html">
+                        <i class="align-middle me-2 fas fa-home"></i>
+                        <span class="align-middle">Главная</span>
+                    </a>
+                </li>
+                <li class="sidebar-item active">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemForms" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-square-check"></i>
+                        <span class="align-middle">Формы</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse show" id="itemForms" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="elements.html">Элементы</a>
+                        </li>
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="layouts.html">Макеты</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand">
+            <a class="sidebar-toggle d-flex mx-3">
+                <i class="hamburger fas fa-bars"></i>
+            </a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown ms-2 mx-3">
+                        <a class="nav-link dropdown-toggle px-0" href="#" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="align-middle fas fa-cog"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Выход
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid">
+                <div class="header">
+                    <h1 class="header-title">Макеты</h1>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="elements.html">Формы</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Макеты</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Базовая форма</h5>
+                            </div>
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormText">Текст</label>
+                                        <input type="text" name="baseFormText" placeholder="Текст" class="form-control" id="baseFormText">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormEmail">Email</label>
+                                        <input type="email" name="baseFormEmail" placeholder="Email" class="form-control" id="baseFormEmail">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormPassword">Пароль</label>
+                                        <input type="password" name="baseFormPassword" placeholder="Пароль" class="form-control" id="baseFormPassword">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormTextarea">Поле ввода</label>
+                                        <textarea name="baseFormTextarea" placeholder="Поле ввода" rows="2" class="form-control" id="baseFormTextarea"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormSelect">Элемент выбора</label>
+                                        <select name="baseFormSelect" class="form-select" id="baseFormSelect">
+                                            <option value="">Не выбрано</option>
+                                            <option value="1">Один</option>
+                                            <option value="2" selected>Два</option>
+                                            <option value="3">Три</option>
+                                            <option value="4">Четыре</option>
+                                            <option value="5">Пять</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormSelectMultiple">Множественный элемент выбора</label>
+                                        <select name="baseFormSelectMultiple" class="form-select" id="baseFormSelectMultiple" multiple>
+                                            <option value="">Не выбрано</option>
+                                            <option value="1" selected>Один</option>
+                                            <option value="2">Два</option>
+                                            <option value="3" selected>Три</option>
+                                            <option value="4">Четыре</option>
+                                            <option value="5">Пять</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormFile">Файл</label>
+                                        <input type="file" name="baseFormFile" class="form-control" id="baseFormFile">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Группа флажков</label>
+                                        <div class="form-check mb-2">
+                                            <input type="checkbox" name="baseFormCheckbox1" class="form-check-input" id="baseFormCheckbox1">
+                                            <label class="form-check-label" for="baseFormCheckbox1">Флажок 1</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="baseFormCheckbox2" class="form-check-input" id="baseFormCheckbox2" checked>
+                                            <label class="form-check-label" for="baseFormCheckbox2">Флажок 2</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Горизонтальная группа флажков</label>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" name="baseFormInlineCheckbox1" class="form-check-input" id="baseFormInlineCheckbox1">
+                                            <label class="form-check-label" for="baseFormInlineCheckbox1">Флажок 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" name="baseFormInlineCheckbox2" class="form-check-input" id="baseFormInlineCheckbox2" checked>
+                                            <label class="form-check-label" for="baseFormInlineCheckbox2">Флажок 2</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Группа радио кнопок</label>
+                                        <div class="form-check mb-2">
+                                            <input type="radio" name="baseFormRadio" class="form-check-input" id="baseFormRadio1">
+                                            <label class="form-check-label" for="baseFormRadio1">Радио кнопка 1</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="baseFormRadio" class="form-check-input" id="baseFormRadio2" checked>
+                                            <label class="form-check-label" for="baseFormRadio2">Радио кнопка 2</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Горизонтальная группа радио кнопок</label>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="baseFormInlineRadio" class="form-check-input" id="baseFormInlineRadio1">
+                                            <label class="form-check-label" for="baseFormInlineRadio1">Радио кнопка 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="baseFormInlineRadio" class="form-check-input" id="baseFormInlineRadio2" checked>
+                                            <label class="form-check-label" for="baseFormInlineRadio2">Радио кнопка 2</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Флажок переключателя</label>
+                                        <div class="form-check form-switch">
+                                            <input type="checkbox" name="baseFormSwitchCheck" class="form-check-input" id="baseFormSwitchCheck" role="switch">
+                                            <label class="form-check-label" for="baseFormSwitchCheck">Флажок переключателя</label>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Кнопка</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Горизонтальная форма</h5>
+                            </div>
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormText">Текст</label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="horizontalFormText" placeholder="Текст" class="form-control" id="horizontalFormText">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormEmail">Email</label>
+                                        <div class="col-lg-9">
+                                            <input type="email" name="horizontalFormEmail" placeholder="Email" class="form-control" id="horizontalFormEmail">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormPassword">Пароль</label>
+                                        <div class="col-lg-9">
+                                            <input type="password" name="horizontalFormPassword" placeholder="Пароль" class="form-control" id="horizontalFormPassword">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormTextarea">Поле ввода</label>
+                                        <div class="col-lg-9">
+                                            <textarea name="horizontalFormTextarea" placeholder="Поле ввода" rows="2" class="form-control" id="horizontalFormTextarea"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormSelect">Элемент выбора</label>
+                                        <div class="col-lg-9">
+                                            <select name="horizontalFormSelect" class="form-select" id="horizontalFormSelect">
+                                                <option value="">Не выбрано</option>
+                                                <option value="1">Один</option>
+                                                <option value="2" selected>Два</option>
+                                                <option value="3">Три</option>
+                                                <option value="4">Четыре</option>
+                                                <option value="5">Пять</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormSelectMultiple">Множественный элемент выбора</label>
+                                        <div class="col-lg-9">
+                                            <select name="horizontalFormSelectMultiple" class="form-select" id="horizontalFormSelectMultiple" multiple>
+                                                <option value="">Не выбрано</option>
+                                                <option value="1" selected>Один</option>
+                                                <option value="2">Два</option>
+                                                <option value="3" selected>Три</option>
+                                                <option value="4">Четыре</option>
+                                                <option value="5">Пять</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label text-lg-end" for="horizontalFormFile">Файл</label>
+                                        <div class="col-lg-9">
+                                            <input type="file" name="horizontalFormFile" class="form-control" id="horizontalFormFile">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label pt-lg-0 text-lg-end">Группа флажков</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check mb-2">
+                                                <input type="checkbox" name="horizontalFormCheckbox1" class="form-check-input" id="horizontalFormCheckbox1">
+                                                <label class="form-check-label" for="horizontalFormCheckbox1">Флажок 1</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" name="horizontalFormCheckbox2" class="form-check-input" id="horizontalFormCheckbox2" checked>
+                                                <label class="form-check-label" for="horizontalFormCheckbox2">Флажок 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label pt-lg-0 text-lg-end">Горизонтальная группа флажков</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" name="horizontalFormInlineCheckbox1" class="form-check-input" id="horizontalFormInlineCheckbox1">
+                                                <label class="form-check-label" for="horizontalFormInlineCheckbox1">Флажок 1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" name="horizontalFormInlineCheckbox2" class="form-check-input" id="horizontalFormInlineCheckbox2" checked>
+                                                <label class="form-check-label" for="horizontalFormInlineCheckbox2">Флажок 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label pt-lg-0 text-lg-end">Группа радио кнопок</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check mb-2">
+                                                <input type="radio" name="horizontalFormRadio" class="form-check-input" id="horizontalFormRadio1">
+                                                <label class="form-check-label" for="horizontalFormRadio1">Радио кнопка 1</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" name="horizontalFormRadio" class="form-check-input" id="horizontalFormRadio2" checked>
+                                                <label class="form-check-label" for="horizontalFormRadio2">Радио кнопка 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label pt-lg-0 text-lg-end">Горизонтальная группа радио кнопок</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" name="horizontalFormInlineRadio" class="form-check-input" id="horizontalFormInlineRadio1">
+                                                <label class="form-check-label" for="horizontalFormInlineRadio1">Радио кнопка 1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" name="horizontalFormInlineRadio" class="form-check-input" id="horizontalFormInlineRadio2" checked>
+                                                <label class="form-check-label" for="horizontalFormInlineRadio2">Радио кнопка 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-lg-3 col-form-label pt-lg-0 text-lg-end" for="horizontalFormSwitchCheck">Флажок переключателя</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check form-switch">
+                                                <input type="checkbox" name="horizontalFormSwitchCheck" class="form-check-input" id="horizontalFormSwitchCheck" role="switch">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Кнопка</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-8 text-center text-md-start"></div>
+
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        &copy; SimpleAdminPanel, 2022
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/js/scripts.js"></script>
+</body>
+</html>

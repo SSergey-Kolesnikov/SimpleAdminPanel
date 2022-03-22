@@ -1,0 +1,15 @@
+{
+  "name": "ssergey-kolesnikov/simpleadminpanel",
+  "description": "Simple administration panel for web applications.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Kolesnikov"
+    }
+  ],
+  "require": {
+    "fortawesome/font-awesome": "^6.1",
+    "twbs/bootstrap": "^5.1"
+  }
+}
