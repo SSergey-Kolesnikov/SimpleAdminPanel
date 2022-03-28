@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Валидация / Формы / SimpleAdminPanel</title>
+
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../vendor/fortawesome/font-awesome/css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../src/css/styles.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <a href="../index.html">SimpleAdminPanel</a>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-user">
+                <img src="../../images/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Иванов Иван">
+                <div class="fw-bold">Иванов Иван</div>
+                <small>IvanovIvan</small>
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="../index.html">
+                        <i class="align-middle me-2 fas fa-home"></i>
+                        <span class="align-middle">Главная</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemAuth" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-square-check"></i>
+                        <span class="align-middle">Авторизация</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="itemAuth" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../auth/login.html">Вход</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-header">Элементы</li>
+                <li class="sidebar-item active">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemForms" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-square-check"></i>
+                        <span class="align-middle">Формы</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse show" id="itemForms" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="elements.html">Элементы</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="layouts.html">Макеты</a>
+                        </li>
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="validation.html">Валидация</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand">
+            <a class="sidebar-toggle d-flex mx-3">
+                <i class="hamburger fas fa-bars"></i>
+            </a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown ms-2 mx-3">
+                        <a class="nav-link dropdown-toggle px-0" href="#" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="align-middle fas fa-cog"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Выход
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid">
+                <div class="header">
+                    <h1 class="header-title">Валидация</h1>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="elements.html">Формы</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Валидация</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Базовая форма с валидацией</h5>
+                            </div>
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormTextInvalid">Текст</label>
+                                        <input type="text" name="baseFormText" placeholder="Текст" class="form-control is-invalid" id="baseFormTextInvalid">
+                                        <div class="invalid-feedback">Укажите поле "Текст"</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormTextarea">Поле ввода</label>
+                                        <textarea name="baseFormTextarea" placeholder="Поле ввода" rows="2" class="form-control is-invalid" id="baseFormTextarea"></textarea>
+                                        <div class="invalid-feedback">Укажите поле "Поле ввода"</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormSelect">Элемент выбора</label>
+                                        <select name="baseFormSelect" class="form-select is-invalid" id="baseFormSelect">
+                                            <option value="" selected>Не выбрано</option>
+                                            <option value="1">Один</option>
+                                            <option value="2">Два</option>
+                                            <option value="3">Три</option>
+                                            <option value="4">Четыре</option>
+                                            <option value="5">Пять</option>
+                                        </select>
+                                        <div class="invalid-feedback">Выберите элемент в поле "Элемент выбора"</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormSelectMultiple">Множественный элемент выбора</label>
+                                        <select name="baseFormSelectMultiple" class="form-select is-invalid" id="baseFormSelectMultiple" multiple>
+                                            <option value="1">Один</option>
+                                            <option value="2">Два</option>
+                                            <option value="3">Три</option>
+                                            <option value="4">Четыре</option>
+                                            <option value="5">Пять</option>
+                                        </select>
+                                        <div class="invalid-feedback">Выберите элементы в поле "Множественный элемент выбора"</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="baseFormFile">Файл</label>
+                                        <input type="file" name="baseFormFile" class="form-control is-invalid" id="baseFormFile">
+                                        <div class="invalid-feedback">Укажите файл в поле "Файл"</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Флажок</label>
+                                        <div class="form-check mb-2">
+                                            <input type="checkbox" name="baseFormCheckbox" class="form-check-input is-invalid" id="baseFormCheckbox">
+                                            <label class="form-check-label" for="baseFormCheckbox">Флажок</label>
+                                            <div class="invalid-feedback">Отметьте флажок</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Группа флажков</label>
+                                        <div class="form-check mb-2 is-invalid">
+                                            <input type="checkbox" name="baseFormCheckbox1" class="form-check-input is-invalid" id="baseFormCheckbox1">
+                                            <label class="form-check-label" for="baseFormCheckbox1">Флажок 1</label>
+                                        </div>
+                                        <div class="form-check is-invalid">
+                                            <input type="checkbox" name="baseFormCheckbox2" class="form-check-input is-invalid" id="baseFormCheckbox2">
+                                            <label class="form-check-label" for="baseFormCheckbox2">Флажок 2</label>
+                                        </div>
+                                        <div class="invalid-feedback">Отметьте один или несколько флажков</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Горизонтальная группа флажков</label>
+                                        <div class="form-check form-check-inline is-invalid">
+                                            <input type="checkbox" name="baseFormInlineCheckbox1" class="form-check-input is-invalid" id="baseFormInlineCheckbox1">
+                                            <label class="form-check-label" for="baseFormInlineCheckbox1">Флажок 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline is-invalid">
+                                            <input type="checkbox" name="baseFormInlineCheckbox2" class="form-check-input is-invalid" id="baseFormInlineCheckbox2">
+                                            <label class="form-check-label" for="baseFormInlineCheckbox2">Флажок 2</label>
+                                        </div>
+                                        <div class="invalid-feedback">Отметьте один или несколько флажков</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Группа радио кнопок</label>
+                                        <div class="form-check mb-2 is-invalid">
+                                            <input type="radio" name="baseFormRadio" class="form-check-input is-invalid" id="baseFormRadio1">
+                                            <label class="form-check-label" for="baseFormRadio1">Радио кнопка 1</label>
+                                        </div>
+                                        <div class="form-check is-invalid">
+                                            <input type="radio" name="baseFormRadio" class="form-check-input is-invalid" id="baseFormRadio2">
+                                            <label class="form-check-label" for="baseFormRadio2">Радио кнопка 2</label>
+                                        </div>
+                                        <div class="invalid-feedback">Выберите радио кнопку</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Горизонтальная группа радио кнопок</label>
+                                        <div class="form-check form-check-inline is-invalid">
+                                            <input type="radio" name="baseFormInlineRadio" class="form-check-input is-invalid" id="baseFormInlineRadio1">
+                                            <label class="form-check-label" for="baseFormInlineRadio1">Радио кнопка 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline is-invalid">
+                                            <input type="radio" name="baseFormInlineRadio" class="form-check-input is-invalid" id="baseFormInlineRadio2">
+                                            <label class="form-check-label" for="baseFormInlineRadio2">Радио кнопка 2</label>
+                                        </div>
+                                        <div class="invalid-feedback">Выберите радио кнопку</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Флажок переключателя</label>
+                                        <div class="form-check form-switch">
+                                            <input type="checkbox" name="baseFormSwitchCheck" class="form-check-input is-invalid" id="baseFormSwitchCheck" role="switch">
+                                            <label class="form-check-label" for="baseFormSwitchCheck">Флажок переключателя</label>
+                                            <div class="invalid-feedback">Ошибка полня "Флажок переключателя"</div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Кнопка</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-8 text-center text-md-start"></div>
+
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        &copy; SimpleAdminPanel, 2022
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/js/scripts.js"></script>
+</body>
+</html>
