@@ -36,6 +36,10 @@ body {
     text-decoration: none;
 }
 
+.page-link:hover {
+    text-decoration: none;
+}
+
 .wrapper {
     display: flex;
     overflow: hidden;
