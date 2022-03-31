@@ -1,3 +1,7 @@
+## v1.0.2
+
+- Assigned appropriate icons for sections in the sidebar
+
 ## v1.0.1
 
 - Updated information on installing the admin panel
