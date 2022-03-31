@@ -26,20 +26,6 @@ body {
     font-size: .9rem;
 }
 
-.card {
-    box-shadow: 0 4px 4px rgb(126 142 177 / 12%);
-    margin-bottom: 1.5rem;
-}
-
-.card-actions .btn {
-    padding: 0 .5rem;
-    text-decoration: none;
-}
-
-.page-link:hover {
-    text-decoration: none;
-}
-
 .wrapper {
     display: flex;
     overflow: hidden;
@@ -314,6 +300,20 @@ a.sidebar-link .fas {
 .breadcrumb-item.active {
     color: #fff;
     font-weight: 500;
+}
+
+.card {
+    box-shadow: 0 4px 4px rgb(126 142 177 / 12%);
+    margin-bottom: 1.5rem;
+}
+
+.card-actions .btn {
+    padding: 0 .5rem;
+    text-decoration: none;
+}
+
+.page-link:hover {
+    text-decoration: none;
 }
 
 .footer {
