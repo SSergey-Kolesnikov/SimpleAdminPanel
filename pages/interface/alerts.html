@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Уведомления / Интерфейс / SimpleAdminPanel</title>
+
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../vendor/fortawesome/font-awesome/css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../src/css/styles.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <a href="../index.html">SimpleAdminPanel</a>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-user">
+                <img src="../../images/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Иванов Иван">
+                <div class="fw-bold">Иванов Иван</div>
+                <small>IvanovIvan</small>
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="../index.html">
+                        <i class="align-middle me-2 fas fa-home"></i>
+                        <span class="align-middle">Главная</span>
+                    </a>
+                </li>
+                <li class="sidebar-header">Примеры</li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemPages" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-file"></i>
+                        <span class="align-middle">Страницы</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="itemPages" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../pages/list-of-elements.html">Список элементов</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemAuth" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-right-to-bracket"></i>
+                        <span class="align-middle">Авторизация</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="itemAuth" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../auth/login.html">Вход</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-header">Элементы</li>
+                <li class="sidebar-item active">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemInterface" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-desktop"></i>
+                        <span class="align-middle">Интерфейс</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse show" id="itemInterface" data-bs-parent="#sidebar">
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="../interface/alerts.html">Уведомления</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemForms" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                        <i class="align-middle me-2 fas fa-square-check"></i>
+                        <span class="align-middle">Формы</span>
+                    </a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="itemForms" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../forms/elements.html">Элементы</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../forms/layouts.html">Макеты</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="../forms/validation.html">Валидация</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand">
+            <a class="sidebar-toggle d-flex mx-3">
+                <i class="hamburger fas fa-bars"></i>
+            </a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown ms-2 mx-3">
+                        <a class="nav-link dropdown-toggle px-0" href="#" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="align-middle fas fa-cog"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1 fas fa-fw fa-link"></i> Link
+                            </a>
+                            <button class="dropdown-item btn btn-link">
+                                <i class="align-middle me-1 fas fa-fw fa-stop"></i> Button
+                            </button>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Выход
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid">
+                <div class="header">
+                    <h1 class="header-title">Уведомления</h1>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="alerts.html">Интерфейс</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Уведомления</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <h5 class="card-title mb-0">Базовые уведомления</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary" role="alert">
+                                    Базовое уведомление - primary!
+                                </div>
+                                <div class="alert alert-secondary" role="alert">
+                                    Базовое уведомление - secondary!
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    Базовое уведомление - success!
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    Базовое уведомление - danger!
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    Базовое уведомление - warning!
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    Базовое уведомление - info!
+                                </div>
+                                <div class="alert alert-light" role="alert">
+                                    Базовое уведомление - light!
+                                </div>
+                                <div class="alert alert-dark" role="alert">
+                                    Базовое уведомление - dark!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <h5 class="card-title mb-0">Уведомления с кнопкой закрытия</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - primary!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - secondary!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - success!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - danger!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - warning!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - info!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - light!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                                    Уведомление с кнопкой закрытия - dark!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-8 text-center text-md-start"></div>
+
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        &copy; SimpleAdminPanel, 2022
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/js/scripts.js"></script>
+</body>
+</html>
