@@ -1,5 +1,6 @@
 ## v1.0.2
 
+- Added a page with examples of notifications
 - Assigned appropriate icons for sections in the sidebar
 
 ## v1.0.1
