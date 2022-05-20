@@ -1,5 +1,6 @@
 ## v1.0.2
 
+- Added icons for available application languages
 - Added a page with examples of notifications
 - Assigned appropriate icons for sections in the sidebar
 
