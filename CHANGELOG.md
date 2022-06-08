@@ -1,3 +1,7 @@
+## v1.0.3
+
+- Added selection of the active menu item in the left sidebar
+
 ## v1.0.2
 
 - Added icons for available application languages

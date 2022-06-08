@@ -138,6 +138,7 @@ a.sidebar-link .fas {
 .sidebar-dropdown .sidebar-item.active .sidebar-link,
 .sidebar-dropdown .sidebar-item .sidebar-link:hover {
     background: #fff;
+    color: #1f2226;
 }
 
 .sidebar [data-bs-toggle=collapse]:before {
