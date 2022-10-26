@@ -4,46 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Главная / SimpleAdminPanel</title>
+    <title>Аккаунт / Настройки пользователя / Страницы / SimpleAdminPanel</title>
 
-    <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../vendor/fortawesome/font-awesome/css/all.min.css"/>
 
-    <link rel="stylesheet" href="../src/css/styles.css"/>
+    <link rel="stylesheet" href="../../../src/css/styles.css"/>
 </head>
 <body>
 <div class="wrapper">
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            SimpleAdminPanel
+            <a href="../../index.html">SimpleAdminPanel</a>
         </div>
 
         <div class="sidebar-content">
             <div class="sidebar-user">
-                <img src="../images/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Иванов Иван">
+                <img src="../../../images/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Иванов Иван">
                 <div class="fw-bold">Иванов Иван</div>
                 <small>IvanovIvan</small>
             </div>
 
             <ul class="sidebar-nav">
-                <li class="sidebar-item active">
-                    <a class="sidebar-link" href="index.html">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="../../index.html">
                         <i class="align-middle me-2 fas fa-home"></i>
                         <span class="align-middle">Главная</span>
                     </a>
                 </li>
                 <li class="sidebar-header">Примеры</li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link collapsed" data-bs-target="#itemPages" data-bs-toggle="collapse" aria-expanded="false" role="button">
+                <li class="sidebar-item active">
+                    <a class="sidebar-link collapsed" data-bs-target="#itemPages" data-bs-toggle="collapse" aria-expanded="true" role="button">
                         <i class="align-middle me-2 fas fa-file"></i>
                         <span class="align-middle">Страницы</span>
                     </a>
-                    <ul class="sidebar-dropdown list-unstyled collapse" id="itemPages" data-bs-parent="#sidebar">
+                    <ul class="sidebar-dropdown list-unstyled collapse show" id="itemPages" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="pages/list-of-elements.html">Список элементов</a>
+                            <a class="sidebar-link" href="../list-of-elements.html">Список элементов</a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="pages/user-settings/account.html">Настройки пользователя</a>
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="../../pages/user-settings/account.html">Настройки пользователя</a>
                         </li>
                     </ul>
                 </li>
@@ -54,7 +54,7 @@
                     </a>
                     <ul class="sidebar-dropdown list-unstyled collapse" id="itemAuth" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="auth/login.html">Вход</a>
+                            <a class="sidebar-link" href="../../auth/login.html">Вход</a>
                         </li>
                     </ul>
                 </li>
@@ -66,7 +66,7 @@
                     </a>
                     <ul class="sidebar-dropdown list-unstyled collapse" id="itemInterface" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="interface/alerts.html">Уведомления</a>
+                            <a class="sidebar-link" href="../../interface/alerts.html">Уведомления</a>
                         </li>
                     </ul>
                 </li>
@@ -77,13 +77,13 @@
                     </a>
                     <ul class="sidebar-dropdown list-unstyled collapse" id="itemForms" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="forms/elements.html">Элементы</a>
+                            <a class="sidebar-link" href="../../forms/elements.html">Элементы</a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="forms/layouts.html">Макеты</a>
+                            <a class="sidebar-link" href="../../forms/layouts.html">Макеты</a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="forms/validation.html">Валидация</a>
+                            <a class="sidebar-link" href="../../forms/validation.html">Валидация</a>
                         </li>
                     </ul>
                 </li>
@@ -101,20 +101,20 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown ms-2 mx-3">
                         <a class="nav-link dropdown-toggle px-0" href="#" id="languageDropdown" data-bs-toggle="dropdown">
-                            <img src="../images/flags/russian.png" alt="Русский" title="Русский" class="img-fluid rounded-pill" height="24" />
+                            <img src="../../../images/flags/russian.png" alt="Русский" title="Русский" class="img-fluid rounded-pill" height="24" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                             <a class="dropdown-item" href="#">
-                                <img src="../images/flags/english.png" alt="English" title="English" height="16" /> English
+                                <img src="../../../images/flags/english.png" alt="English" title="English" height="16" /> English
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="../images/flags/deutsch.png" alt="Deutsch" title="Deutsch" height="16" /> Deutsch
+                                <img src="../../../images/flags/deutsch.png" alt="Deutsch" title="Deutsch" height="16" /> Deutsch
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="../images/flags/french.png" alt="Français" title="Français" height="16" /> Français
+                                <img src="../../../images/flags/french.png" alt="Français" title="Français" height="16" /> Français
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="../images/flags/italiano.png" alt="Italiano" title="Italiano" height="16" /> Italiano
+                                <img src="../../../images/flags/italiano.png" alt="Italiano" title="Italiano" height="16" /> Italiano
                             </a>
                         </div>
                     </li>
@@ -142,19 +142,50 @@
         <main class="content">
             <div class="container-fluid">
                 <div class="header">
-                    <h1 class="header-title">Главная</h1>
+                    <h1 class="header-title">Настройки пользователя</h1>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="../list-of-elements.html">Страницы</a></li>
+                            <li class="breadcrumb-item"><a href="account.html">Настройки пользователя</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Данные аккаунта</li>
+                        </ol>
+                    </nav>
                 </div>
 
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-md-3 col-xl-2">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title mb-0">Заголовок</h5>
+                                <h5 class="card-title mb-0">Пользователь</h5>
                             </div>
-
+                            <ul class="list-group list-group-flush">
+                                <a href="account.html" class="list-group-item list-group-item-action active">Аккаунт</a>
+                                <a href="password.html" class="list-group-item list-group-item-action">Пароль</a>
+                                <a href="account-deleting.html" class="list-group-item list-group-item-action link-danger">Удаление аккаунта</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-xl-10">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Данные аккаунта</h5>
+                            </div>
                             <div class="card-body">
-                                <p>Задача организации, в особенности же новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. Таким образом новая модель организационной деятельности способствует подготовки и реализации форм развития.</p>
-                                <p>Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации систем массового участия. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации новых предложений. Товарищи! новая модель организационной деятельности требуют определения и уточнения систем массового участия.</p>
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="userSettingsLogin">Логин</label>
+                                        <input type="text" name="userSettingsLogin" placeholder="Логин" class="form-control" id="userSettingsLogin">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="userSettingsEmail">Email</label>
+                                        <input type="email" name="userSettingsEmail" placeholder="Email" class="form-control" id="userSettingsEmail">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -177,7 +208,7 @@
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../src/js/scripts.js"></script>
+<script src="../../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../../src/js/scripts.js"></script>
 </body>
 </html>
