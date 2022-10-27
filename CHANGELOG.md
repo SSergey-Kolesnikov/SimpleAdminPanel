@@ -1,5 +1,6 @@
 ## v1.0.3
 
+- Item activity display changed to badge
 - Added sample page with user account settings
 - Added selection of the active menu item in the left sidebar
 
