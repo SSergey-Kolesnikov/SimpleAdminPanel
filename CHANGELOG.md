@@ -1,5 +1,6 @@
 ## v1.0.3
 
+- Minimum version of Bootstrap 5.2
 - Item activity display changed to badge
 - Added sample page with user account settings
 - Added selection of the active menu item in the left sidebar
