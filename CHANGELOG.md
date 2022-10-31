@@ -1,3 +1,7 @@
+## v1.0.4
+
+- Margins for cards in styles have been replaced with standard Bootstrap classes
+
 ## v1.0.3
 
 - Minimum version of Bootstrap 5.2
