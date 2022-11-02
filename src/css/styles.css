@@ -26,6 +26,10 @@ body {
     font-size: .9rem;
 }
 
+.btn:hover {
+    text-decoration: none;
+}
+
 .wrapper {
     display: flex;
     overflow: hidden;

@@ -1,3 +1,7 @@
+## v1.0.5
+
+- Removed text underlining when hovering over button links (.btn)
+
 ## v1.0.4
 
 - Margins for cards in styles have been replaced with standard Bootstrap classes
