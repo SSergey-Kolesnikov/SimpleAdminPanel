@@ -1,5 +1,6 @@
 ## v1.0.5
 
+- Added text under the form for the login page
 - Removed text underlining when hovering over button links (.btn)
 
 ## v1.0.4
